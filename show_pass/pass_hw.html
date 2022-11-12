@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show or hide Password</title>
+</head>
+<body>
+    <!-- You can hide or show user password on site using this method -->
+    <label>Password</label>
+    <input type="password" id="txt">
+    <!-- by default it's hidden so we use a closed eye to identify when it's hidden-->
+    <img src="eyeclose.jpg" id="eye" height="20" width="40" alt="hidden" onclick="fun()">
+</body>
+</html>
+<script>
+    function fun()
+    {
+        var a=document.querySelector("#txt");
+        if (a.type=="password")
+        // when you click on the closed eye icon the password will be shown and the eye will be open
+        {
+            a.type="text";
+            document.querySelector("#eye").src="eyeopen.jpg"
+        }
+        else
+        {
+            a.type="password";
+            document.querySelector("#eye").src="eyeclose.jpg"
+        }
+    }
+</script>
